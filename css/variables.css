@@ -1,0 +1,40 @@
+/* ============================================================
+   variables.css  ―  デザイントークン置き場
+   ★ ChatGPT（デザイン担当）は基本ここを書き換えるだけでOK。
+     色・余白・フォント・角丸・影などを全部ここに集約しています。
+     HTML(index.html)の構造は触らなくても全面リデザインできます。
+   ============================================================ */
+
+:root {
+  /* --- カラー（仮の値。差し替え前提） ------------------------- */
+  --color-bg:           #0e0e12;   /* ページ背景 */
+  --color-surface:      #1a1a22;   /* カード・セクション面 */
+  --color-text:         #f4f4f6;   /* 基本テキスト */
+  --color-text-muted:   #a9a9b8;   /* 補助テキスト */
+  --color-accent:       #e7b94c;   /* アクセント（CTA・見出し強調） */
+  --color-accent-2:     #6c63ff;   /* サブアクセント */
+  --color-border:       #2c2c38;   /* 罫線 */
+  --color-badge-bg:     #e7b94c;
+  --color-badge-text:   #1a1a22;
+
+  /* --- タイポグラフィ ----------------------------------------- */
+  --font-base: "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui, sans-serif;
+  --font-display: "Hiragino Mincho ProN", "Noto Serif JP", serif; /* 見出し用 */
+  --fs-hero:    clamp(2.4rem, 8vw, 5rem);
+  --fs-h2:      clamp(1.6rem, 4vw, 2.4rem);
+  --fs-h3:      1.25rem;
+  --fs-body:    1rem;
+  --fs-small:   0.85rem;
+  --lh-base:    1.8;
+
+  /* --- レイアウト --------------------------------------------- */
+  --maxw:        960px;     /* コンテンツ最大幅 */
+  --gutter:      24px;      /* 左右の余白 */
+  --section-gap: clamp(56px, 10vw, 120px); /* セクション間 */
+  --radius:      14px;
+  --radius-sm:   8px;
+
+  /* --- 効果 --------------------------------------------------- */
+  --shadow:      0 10px 40px rgba(0,0,0,.35);
+  --transition:  .25s ease;
+}

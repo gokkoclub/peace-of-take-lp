@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ▼ SEO / OGP（ChatGPTが文言・画像を調整可。画像は assets/ に置く） -->
+  <title>Peace of take ｜ ファン交流イベント 2026.7.5</title>
+  <meta name="description" content="2026年7月5日（日）、高円寺アトレノワにて開催するファン交流イベント「Peace of take」。三部制・入場無料。" />
+  <meta property="og:title" content="Peace of take" />
+  <meta property="og:description" content="2026.7.5(日) 高円寺アトレノワ／ファン交流イベント／入場無料・三部制" />
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:image" content="assets/ogp.jpg" /> 画像が決まったら有効化 -->
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ANALYTICS: 計測を入れる場合はここにタグを貼る（推奨: Cloudflare Web Analytics / Cookieless）。
+       現状は未導入。導入時は外部送信規律に基づくプライバシー記載も併せて。 -->
+</head>
+<body>
+
+  <!-- ===================== ヘッダー ===================== -->
+  <header class="site-header">
+    <div class="container">
+      <span class="site-header__logo">Peace of take</span>
+      <nav class="nav" aria-label="セクション内ナビ">
+        <a href="#about">about</a>
+        <a href="#program">三部制</a>
+        <a href="#cast">出演</a>
+        <a href="#access">アクセス</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== ヒーロー ===================== -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">FAN MEETING EVENT</p>
+        <h1 class="hero__title">Peace of take</h1>
+        <p class="hero__lead">
+          <span class="piece" data-order="0">日常</span>を少し忘れられる、平和な空間。<br>
+          ドラマでは見られない姿をぜひ見にきてください。
+        </p>
+
+        <p style="margin-top:1.5rem;"><span class="badge">入場無料</span></p>
+
+        <dl class="hero__meta">
+          <div><dt>DATE</dt><dd>2026.7.5 (日)</dd></div>
+          <div><dt>TIME</dt><dd>三部制（11:00–／14:00–／17:00–）</dd></div>
+          <div><dt>PLACE</dt><dd>アトレノワ（高円寺）</dd></div>
+        </dl>
+
+        <!-- 開催までのカウントダウン（js/main.js が描画） -->
+        <div class="countdown" id="countdown" aria-label="開催までのカウントダウン"></div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="eyebrow">ABOUT</p>
+        <h2 class="section__title">このイベントについて</h2>
+        <p>
+          「Peace of take」は、出演者とファンが直接ふれあえる<strong>ファン交流イベント</strong>です。
+          ドリンクを片手に、軽いトークショーや物販を楽しめる一日。
+          会場<span class="piece" data-order="1">で</span>しか見られない空気を、いっしょに。
+          ふだんはつい<span class="piece" data-order="2">忘れがちな</span>時間も、ここではゆっくりと過ごせます。
+          チケットの事前購入は不要、ふらっと立ち寄れる場として開きます。
+        </p>
+        <!-- ★イベントの想いやコンセプト文をここに足せます -->
+      </div>
+    </section>
+
+    <!-- ===================== 三部制プログラム ===================== -->
+    <section class="section" id="program">
+      <div class="container">
+        <p class="eyebrow">PROGRAM</p>
+        <h2 class="section__title">三部制プログラム</h2>
+        <p>各部とも「ドリンク提供／物販／軽いトークショー」を実施します。お気軽にお越しください。</p>
+
+        <div class="program__grid">
+          <article class="part">
+            <span class="part__no">第一部</span>
+            <span class="part__time">11:00 – 13:00</span>
+            <p>ドリンク提供・物販・軽いトークショー</p>
+            <div class="part__tags">
+              <span class="tag">ソフトドリンクのみ</span>
+              <span class="tag">どなたでも</span>
+            </div>
+          </article>
+
+          <article class="part">
+            <span class="part__no">第二部</span>
+            <span class="part__time">14:00 – 16:00</span>
+            <p>ドリンク提供・物販・軽いトークショー</p>
+            <div class="part__tags">
+              <span class="tag">ソフトドリンクのみ</span>
+              <span class="tag">どなたでも</span>
+            </div>
+          </article>
+
+          <article class="part">
+            <span class="part__no">第三部</span>
+            <span class="part__time">17:00 – 20:00</span>
+            <p>ドリンク提供・物販・軽いトークショー</p>
+            <div class="part__tags">
+              <span class="tag tag--fc">倶楽葉 会員限定</span>
+              <span class="tag">アルコール提供あり</span>
+              <span class="tag">身分証確認あり</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="notes small" style="margin-top:1.5rem;">
+          ※定員は各部50名程度、基本先着順です。入りきらない場合は次の部の整理券をお配りします。
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== 出演者 ===================== -->
+    <section class="section" id="cast">
+      <div class="container">
+        <p class="eyebrow">CAST</p>
+        <h2 class="section__title">出演者</h2>
+        <p>ステージとはちがう、<span class="piece" data-order="3">小さな</span>素顔にも会える一日です。</p>
+        <div class="cast__grid">
+          <!-- 写真は assets/ に置いて src を差し替え。未設定時はグレー枠表示 -->
+          <figure class="cast__item">
+            <img class="cast__photo" alt="渡辺大貴" src="assets/cast-1.jpg?v=2" onerror="this.style.visibility='hidden'">
+            <figcaption class="cast__name">渡辺大貴</figcaption>
+          </figure>
+          <figure class="cast__item">
+            <img class="cast__photo" alt="早坂架威" src="assets/cast-2.jpg?v=2" onerror="this.style.visibility='hidden'">
+            <figcaption class="cast__name">早坂架威</figcaption>
+          </figure>
+          <figure class="cast__item">
+            <img class="cast__photo" alt="後藤光輝" src="assets/cast-3.jpg?v=2" onerror="this.style.visibility='hidden'">
+            <figcaption class="cast__name">後藤光輝</figcaption>
+          </figure>
+          <figure class="cast__item">
+            <img class="cast__photo" alt="根井深考" src="assets/cast-4.jpg?v=2" onerror="this.style.visibility='hidden'">
+            <figcaption class="cast__name">根井深考</figcaption>
+          </figure>
+        </div>
+        <p class="notes small" style="margin-top:1rem;">※出演者は変更となる場合があります。</p>
+      </div>
+    </section>
+
+    <!-- ===================== アクセス ===================== -->
+    <section class="section" id="access">
+      <div class="container">
+        <p class="eyebrow">ACCESS</p>
+        <h2 class="section__title">会場・アクセス</h2>
+        <p><strong>アトレノワ</strong>　丸ノ内線「新高円寺」駅から徒歩3分</p>
+        <p class="access__addr">〒166-0003 東京都杉並区高円寺南2-16-13 オーブビレッジ地下1階</p>
+        <iframe
+          class="access__map"
+          title="アトレノワ 地図"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=東京都杉並区高円寺南2-16-13&output=embed"></iframe>
+      </div>
+    </section>
+
+    <!-- ===================== 注意事項 ===================== -->
+    <section class="section notes" id="notes">
+      <div class="container">
+        <p class="eyebrow">INFORMATION</p>
+        <h2 class="section__title">注意事項・ご来場前の確認</h2>
+        <ul>
+          <li>第三部はごっこ公式ファンクラブ「<strong>倶楽葉</strong>」会員のみのイベントです。
+            <a href="https://gokkoclub.fanpla.jp/" target="_blank" rel="noopener">ファンクラブ会員登録はこちら</a></li>
+          <li>第三部のみ、年齢確認のため<strong>身分証</strong>を確認させていただきます（アルコール提供のため）。</li>
+          <li>入場は無料です。<strong>ドリンクは有料</strong>、飲食物の<strong>持ち込みは禁止</strong>です。</li>
+          <li>各部の定員は50名程度・基本先着順です。満員の際は次の部の整理券をお渡しします。</li>
+          <li>出演者は変更となる場合があります。</li>
+          <li>お問い合わせは <a href="mailto:fanclub_info@gokkoclub.jp">fanclub_info@gokkoclub.jp</a> まで、お気軽にどうぞ。</li>
+        </ul>
+        <p class="small">※キャスト個人へのお問い合わせにはお答えできません。<br>
+        ——あふれる<span class="piece" data-order="4">愛</span>は、ぜひ当日、会場で。</p>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="section__title">よくある質問</h2>
+
+        <details class="faq__item">
+          <summary class="faq__q">予約は必要ですか？</summary>
+          <div class="faq__a">事前予約は不要です。各部とも基本先着順（50名程度）でご入場いただけます。満員の場合は次の部の整理券をお渡しします。</div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">入場料はかかりますか？</summary>
+          <div class="faq__a">入場は無料です。ドリンクのみ有料となります。飲食物のお持ち込みはご遠慮ください。</div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">第三部はだれでも参加できますか？</summary>
+          <div class="faq__a">第三部はファンクラブ「倶楽葉」会員限定です。また年齢確認のため身分証を確認させていただきます。</div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">アルコールは提供されますか？</summary>
+          <div class="faq__a">第一部・第二部はソフトドリンクのみ、第三部はアルコールの提供もあります（20歳以上・身分証確認あり）。</div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">出演者全員に会えますか？</summary>
+          <div class="faq__a">出演者は変更となる場合があります。最新情報は本ページおよび公式の告知をご確認ください。</div>
+        </details>
+
+        <!-- 以下は回答が未確定。捏造せず「確認中」で表示。確定したら本文を差し替え -->
+        <details class="faq__item">
+          <summary class="faq__q">写真・動画の撮影はできますか？</summary>
+          <div class="faq__a"><span class="todo">※撮影可否は確認中です。</span></div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">物販の支払い方法は？（現金／キャッシュレス）</summary>
+          <div class="faq__a">現金・PayPay・クレジットカードの3種類がご利用いただけます。</div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__q">再入場はできますか？</summary>
+          <div class="faq__a">再入場は可能です。ただし、混雑時は定員の都合で再入場をお待ちいただく・お入りいただけない場合があります。あらかじめご了承ください。</div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== フッター ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>主催・運営：株式会社GOKKO</p>
+      <p>お問い合わせ：<a href="mailto:fanclub_info@gokkoclub.jp">fanclub_info@gokkoclub.jp</a></p>
+      <p style="margin-top:1rem;">© 2026 GOKKO Inc. ｜ Peace of take</p>
+    </div>
+  </footer>
+
+  <!-- ピース収集トラッカー（最初のピースを押すと出現／js が中身を生成） -->
+  <div class="piece-tracker" id="piece-tracker" data-active="false" aria-hidden="true"></div>
+
+  <!-- 隠し仕掛けクリア時のごほうびモーダル（js が制御） -->
+  <div class="secret" id="secret" role="dialog" aria-modal="true" aria-label="ごほうび">
+    <div class="secret__box">
+      <p class="eyebrow">YOU FOUND IT</p>
+      <p class="secret__phrase">日常で忘れがちな小さな愛</p>
+      <p class="secret__prize">🍹 ドリンク1杯 無料</p>
+      <img class="secret__qr" src="assets/coupon-qr.png"
+           alt="ドリンク1杯無料チケットのQRコード" width="200" height="200" />
+      <p class="secret__use">この画面を会場スタッフにご提示ください</p>
+      <p class="secret__msg">小さな仕掛けに気付いてくれたあなたに送るプレゼント。他の人には内緒にしてね。</p>
+      <button class="secret__close" onclick="document.getElementById('secret').dataset.open='false'">閉じる</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/easter-egg.js"></script>
+</body>
+</html>

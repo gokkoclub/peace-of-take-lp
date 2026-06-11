@@ -1,0 +1,233 @@
+/* ============================================================
+   style.css  ―  レイアウト/セクションの土台
+   ★ 見た目の「骨格」だけを定義。色やフォントは variables.css 参照。
+     ChatGPTはこのファイルでセクションごとの装飾を足していけます。
+     クラス名は意味ベース（.hero / .program など）にしてあるので、
+     セレクタを頼りに自由に上書きしてください。
+   ============================================================ */
+
+/* --- リセット ------------------------------------------------ */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-base);
+  font-size: var(--fs-body);
+  line-height: var(--lh-base);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--color-accent); }
+
+/* --- 汎用レイアウト ------------------------------------------ */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.section { padding-block: var(--section-gap); }
+.section__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  margin: 0 0 1.5rem;
+  letter-spacing: .04em;
+}
+.eyebrow {
+  display: inline-block;
+  font-size: var(--fs-small);
+  letter-spacing: .25em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+
+/* --- ヘッダー / ナビ ----------------------------------------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(8px);
+  background: color-mix(in srgb, var(--color-bg) 80%, transparent);
+  border-bottom: 1px solid var(--color-border);
+}
+.site-header .container {
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 60px;
+}
+.site-header__logo { font-family: var(--font-display); font-weight: 700; }
+.nav { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.nav a { color: var(--color-text-muted); text-decoration: none; font-size: var(--fs-small); }
+.nav a:hover { color: var(--color-text); }
+
+/* --- ヒーロー ------------------------------------------------ */
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding-block: var(--section-gap);
+  overflow: hidden;
+}
+.hero__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  line-height: 1.05;
+  margin: 0 0 1rem;
+}
+.hero__lead { color: var(--color-text-muted); max-width: 32em; margin-inline: auto; }
+.hero__meta {
+  display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: center;
+  margin-top: 2rem; font-size: var(--fs-small);
+}
+.hero__meta dt { color: var(--color-accent); font-weight: 700; }
+.hero__meta dd { margin: 0; }
+.badge {
+  display: inline-block;
+  background: var(--color-badge-bg); color: var(--color-badge-text);
+  font-weight: 700; font-size: var(--fs-small);
+  padding: .35em .9em; border-radius: 999px; letter-spacing: .05em;
+}
+
+/* --- カウントダウン ------------------------------------------ */
+.countdown { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
+.countdown__unit {
+  min-width: 64px; padding: .75rem .5rem;
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm); text-align: center;
+}
+.countdown__num { font-size: 1.6rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.countdown__label { font-size: .7rem; color: var(--color-text-muted); letter-spacing: .1em; }
+
+/* --- プログラム（三部制） ------------------------------------ */
+.program__grid { display: grid; gap: 1rem; }
+@media (min-width: 720px) { .program__grid { grid-template-columns: repeat(3, 1fr); } }
+.part {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex; flex-direction: column; gap: .75rem;
+}
+.part__no { font-family: var(--font-display); color: var(--color-accent); font-size: 1.1rem; }
+.part__time { font-size: 1.4rem; font-weight: 700; }
+.part__tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: auto; }
+.tag {
+  font-size: var(--fs-small); padding: .2em .7em;
+  border: 1px solid var(--color-border); border-radius: 999px;
+  color: var(--color-text-muted);
+}
+.tag--fc { border-color: var(--color-accent); color: var(--color-accent); }
+
+/* --- 出演者（元写真を大きく、縦に4枚） ----------------------- */
+.cast__grid {
+  display: flex; flex-direction: column; gap: 2.5rem;
+  max-width: 720px; margin-inline: auto;   /* ★写真の最大幅。大きさはここで調整 */
+}
+.cast__item { background: transparent; border: 0; padding: 0; text-align: center; }
+.cast__photo {
+  width: 100%; height: auto; display: block;
+  border-radius: var(--radius); background: var(--color-surface);
+  margin-bottom: .85rem;
+}
+.cast__name { font-weight: 700; font-size: 1.15rem; }
+
+/* --- アクセス ------------------------------------------------ */
+.access__map {
+  width: 100%; aspect-ratio: 16 / 9; border: 0;
+  border-radius: var(--radius); margin-top: 1rem;
+}
+.access__addr { color: var(--color-text-muted); font-size: var(--fs-small); }
+
+/* --- 注意事項 ------------------------------------------------ */
+.notes ul { padding-left: 1.2em; }
+.notes li { margin-bottom: .6rem; }
+.notes .small { color: var(--color-text-muted); font-size: var(--fs-small); }
+
+/* --- FAQ（アコーディオン） ----------------------------------- */
+.faq__item {
+  border-bottom: 1px solid var(--color-border);
+}
+.faq__q {
+  width: 100%; text-align: left; cursor: pointer;
+  background: none; border: 0; color: inherit; font: inherit;
+  padding: 1.1rem 0; display: flex; justify-content: space-between; gap: 1rem;
+}
+.faq__q::after { content: "＋"; color: var(--color-accent); }
+.faq__item[open] .faq__q::after { content: "−"; }
+.faq__a { padding-bottom: 1.1rem; color: var(--color-text-muted); }
+.todo { color: var(--color-accent-2); font-size: var(--fs-small); } /* ※確認中の印 */
+
+/* --- フッター ------------------------------------------------ */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding-block: 3rem; text-align: center; color: var(--color-text-muted);
+  font-size: var(--fs-small);
+}
+.site-footer a { color: var(--color-accent); }
+
+/* ============================================================
+   隠しピース「日常で忘れがちな小さな愛」関連
+   ============================================================ */
+
+/* ピース本体：見た目は“ふつうの文字”のまま（あえてヒントを出さない）。
+   正しい順に押されると .found が付いて色が変わる。 */
+.piece {
+  cursor: pointer;                 /* PCでうっすら気づける程度。隠したいなら inherit に */
+  transition: color .35s ease, text-shadow .35s ease;
+}
+.piece.found {
+  color: var(--color-accent);
+  text-shadow: 0 0 12px color-mix(in srgb, var(--color-accent) 55%, transparent);
+}
+
+/* 収集トラッカー（最初のピースを押すと画面下にふわっと出る） */
+.piece-tracker {
+  position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
+  display: none; gap: .15em; align-items: center;
+  background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+  border: 1px solid var(--color-border);
+  border-radius: 999px; padding: .5em 1.1em; z-index: 60;
+  font-family: var(--font-display); font-size: 1rem; letter-spacing: .08em;
+  box-shadow: var(--shadow); backdrop-filter: blur(6px);
+}
+.piece-tracker[data-active="true"] { display: flex; }
+.piece-tracker span { color: var(--color-text-muted); opacity: .35; transition: all .35s ease; }
+.piece-tracker span.on { color: var(--color-accent); opacity: 1; }
+
+/* ごほうびモーダル（初期は非表示） */
+.secret {
+  position: fixed; inset: 0; display: none; place-content: center;
+  background: rgba(0,0,0,.85); z-index: 100; padding: var(--gutter);
+}
+.secret[data-open="true"] { display: grid; }
+.secret__box {
+  background: var(--color-surface); border: 1px solid var(--color-accent);
+  border-radius: var(--radius); padding: 2.25rem; max-width: 27em; text-align: center;
+  box-shadow: var(--shadow);
+}
+.secret__phrase {
+  font-family: var(--font-display); font-size: 1.35rem;
+  color: var(--color-text); margin: .25rem 0 1.25rem; letter-spacing: .06em;
+}
+.secret__prize {
+  font-size: 1.6rem; font-weight: 700; color: var(--color-accent);
+  margin: 0 0 1rem; letter-spacing: .04em;
+}
+.secret__qr {
+  width: 200px; height: 200px; display: block; margin: 0 auto .6rem;
+  background: #fff; padding: 8px; border-radius: var(--radius-sm);
+}
+.secret__use {
+  font-size: var(--fs-small); color: var(--color-accent); margin: 0 0 1.25rem;
+}
+.secret__msg {
+  color: var(--color-text-muted); font-size: var(--fs-small);
+  line-height: 1.85; margin-bottom: 1.5rem;
+}
+.secret__close {
+  background: var(--color-accent); color: var(--color-badge-text);
+  border: 0; border-radius: 999px; padding: .55em 1.6em;
+  font: inherit; font-weight: 700; cursor: pointer;
+}
