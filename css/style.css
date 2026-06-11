@@ -212,12 +212,9 @@ a { color: var(--color-accent); }
   color: var(--color-text); margin: .25rem 0 1.25rem; letter-spacing: .06em;
 }
 .secret__prize {
-  font-size: 1.6rem; font-weight: 700; color: var(--color-accent);
-  margin: 0 0 1rem; letter-spacing: .04em;
-}
-.secret__qr {
-  width: 200px; height: 200px; display: block; margin: 0 auto .6rem;
-  background: #fff; padding: 8px; border-radius: var(--radius-sm);
+  font-size: 1.7rem; font-weight: 700; color: var(--color-accent);
+  border: 2px dashed var(--color-accent); border-radius: var(--radius);
+  padding: 1.1rem 1rem; margin: .5rem 0 1rem; letter-spacing: .04em;
 }
 .secret__use {
   font-size: var(--fs-small); color: var(--color-accent); margin: 0 0 1.25rem;
