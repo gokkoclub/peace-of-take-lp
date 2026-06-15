@@ -1,40 +1,48 @@
 /* ============================================================
-   variables.css  ―  デザイントークン置き場
-   ★ ChatGPT（デザイン担当）は基本ここを書き換えるだけでOK。
-     色・余白・フォント・角丸・影などを全部ここに集約しています。
-     HTML(index.html)の構造は触らなくても全面リデザインできます。
+   variables.css  ―  Peace of take / Night Lounge Secret Ticket
    ============================================================ */
 
 :root {
-  /* --- カラー（仮の値。差し替え前提） ------------------------- */
-  --color-bg:           #0e0e12;   /* ページ背景 */
-  --color-surface:      #1a1a22;   /* カード・セクション面 */
-  --color-text:         #f4f4f6;   /* 基本テキスト */
-  --color-text-muted:   #a9a9b8;   /* 補助テキスト */
-  --color-accent:       #e7b94c;   /* アクセント（CTA・見出し強調） */
-  --color-accent-2:     #6c63ff;   /* サブアクセント */
-  --color-border:       #2c2c38;   /* 罫線 */
-  --color-badge-bg:     #e7b94c;
-  --color-badge-text:   #1a1a22;
+  /* --- カラー ------------------------------------------------ */
+  --color-bg:           #10100f;
+  --color-surface:      #191816;
+  --color-text:         #f4efe4;
+  --color-text-muted:   #aaa093;
+  --color-accent:       #c8a96a;
+  --color-accent-2:     #8f4f45;
+  --color-border:       rgba(244, 239, 228, .13);
+  --color-badge-bg:     #c8a96a;
+  --color-badge-text:   #151310;
+
+  /* --- 追加ニュアンスカラー ---------------------------------- */
+  --color-night:        #10100f;
+  --color-ink:          #151310;
+  --color-wine:         #4b1f24;
+  --color-brass:        #c8a96a;
+  --color-cream:        #f4efe4;
+  --color-smoke:        #25221e;
+  --color-shadow:       rgba(0, 0, 0, .42);
 
   /* --- タイポグラフィ ----------------------------------------- */
-  --font-base: "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui, sans-serif;
-  --font-display: "Hiragino Mincho ProN", "Noto Serif JP", serif; /* 見出し用 */
-  --fs-hero:    clamp(2.4rem, 8vw, 5rem);
-  --fs-h2:      clamp(1.6rem, 4vw, 2.4rem);
+  --font-base: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", system-ui, sans-serif;
+  --font-display: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+
+  --fs-hero:    clamp(3rem, 13vw, 8rem);
+  --fs-h2:      clamp(1.65rem, 5.8vw, 3rem);
   --fs-h3:      1.25rem;
-  --fs-body:    1rem;
-  --fs-small:   0.85rem;
-  --lh-base:    1.8;
+  --fs-body:    clamp(1rem, 2.5vw, 1.06rem);
+  --fs-small:   .82rem;
+  --lh-base:    1.95;
 
   /* --- レイアウト --------------------------------------------- */
-  --maxw:        960px;     /* コンテンツ最大幅 */
-  --gutter:      24px;      /* 左右の余白 */
-  --section-gap: clamp(56px, 10vw, 120px); /* セクション間 */
-  --radius:      14px;
-  --radius-sm:   8px;
+  --maxw:        1040px;
+  --gutter:      clamp(20px, 5vw, 40px);
+  --section-gap: clamp(72px, 14vw, 140px);
+  --radius:      24px;
+  --radius-sm:   14px;
 
   /* --- 効果 --------------------------------------------------- */
-  --shadow:      0 10px 40px rgba(0,0,0,.35);
-  --transition:  .25s ease;
+  --shadow:      0 28px 90px var(--color-shadow);
+  --shadow-soft: 0 16px 48px rgba(0, 0, 0, .26);
+  --transition:  .28s cubic-bezier(.22, 1, .36, 1);
 }
