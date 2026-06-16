@@ -9,7 +9,7 @@
   --color-text:         #f4efe4;
   --color-text-muted:   #aaa093;
   --color-accent:       #c8a96a;
-  --color-accent-2:     #8f4f45;
+  --color-accent-2:     #ff7aa8;
   --color-border:       rgba(244, 239, 228, .13);
   --color-badge-bg:     #c8a96a;
   --color-badge-text:   #151310;
@@ -21,6 +21,9 @@
   --color-brass:        #c8a96a;
   --color-cream:        #f4efe4;
   --color-smoke:        #25221e;
+  --color-neon-pink:    #ff7aa8;
+  --color-neon-blue:    #8ea7ff;
+  --color-neon-purple:  #b98cff;
   --color-shadow:       rgba(0, 0, 0, .42);
 
   /* --- タイポグラフィ ----------------------------------------- */
